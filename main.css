@@ -1,0 +1,13 @@
+ul {
+	padding: 0px;
+	list-style: none;
+}
+
+[type="checkbox"]:hover {
+	cursor: pointer;
+}
+
+#app li > span.done {
+	text-decoration: line-through;
+	color: #ccc;
+}
