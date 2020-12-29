@@ -11,3 +11,20 @@ ul {
 	text-decoration: line-through;
 	color: #ccc;
 }
+
+h2 {
+	padding: 20px;
+	margin: 0;
+	background-color: cadetblue;
+	box-shadow: 5px 4px 2px rgba(0, 0, 0, 0.5);
+	color: #ffffff;
+	text-align: center;
+}
+
+.container {
+	display: flex;
+}
+
+.center-box {
+	flex-grow: 1;
+}

@@ -8,23 +8,27 @@
 		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 	</head>
 	<body>
-		<h1>ToDoアプリ</h1>
-		<div id="app">
-			<ul v-if="todos.length">
-				<li v-for="(todo,index) in todos">
-					<input type="checkbox" @click="deleteTodo(index)" />
-					<span v-bind:class="{done:todo.isDone}">{{todo.title}}</span>
-				</li>
-			</ul>
-			<ul v-else>
-				<li>ToDoを追加してね！</li>
-			</ul>
-			<!-- <form v-on:submit="addTodo"> -->
-			<form @submit.prevent="addTodo">
-				<input type="text" v-model="newItem" />
-				<input type="submit" value="add" />
-			</form>
+		<h2>ToDo App</h2>
+		<div class="container">
+			<div style="width: 50px"></div>
+			<div id="app" style="padding-top: 40px" class="center-box">
+				<ul v-if="todos.length">
+					<li v-for="(todo,index) in todos">
+						<input type="checkbox" @click="deleteTodo(index)" />
+						<span v-bind:class="{done:todo.isDone}">{{todo.title}}</span>
+					</li>
+				</ul>
+				<ul v-else>
+					<li>ToDoを追加してね！</li>
+				</ul>
+				<form @submit.prevent="addTodo">
+					<input type="text" v-model="newItem" />
+					<input type="submit" value="add" />
+				</form>
+			</div>
+			<div style="width: 50px"></div>
 		</div>
+
 		<script src="main.js"></script>
 	</body>
 </html>
